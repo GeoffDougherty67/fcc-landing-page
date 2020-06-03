@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<link rel="stylesheet" type='text/css' href='/css/custom-style.css'>
+		<style>
+			@media only screen and (max-width: 768px) {
+				/* For mobile phones: */
+				[class*="col-"] {
+					width: 100%;
+				}
+			}
+		
+			.flex-container {
+				display: flex;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<header id='header'>
+			<center>
+				<img id='header-img' src='https://static.wixstatic.com/media/a33f1c_874957abf6aa46de8f13d29a164f527e~mv2.jpg/v1/fill/w_450,h_580,al_c,q_80,usm_0.66_1.00_0.01/rbg.webp'/>
+				<nav id='nav-bar'>
+					<a class='nav-link' href='#subscribe'>Subscribe</a>
+					<a class='nav-link' href='#about-RBG'>About RBG</a>
+					<a class='nav-link' href='#about-us'>About Us</a>
+				</nav>
+			</center>
+		</header>
+		<section id= 'about-RBG'>
+			<center>
+				<h1>Is RBG Okay?</h1>
+				<iframe id='video' width="560" height="315" src="https://www.youtube.com/embed/eY9OE-Eq4TE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</center>
+		</section>
+		<section id='subscribe'>
+			<center>
+				<h2>Subscribe below:</h2>
+				<form id="form" action="https://www.freecodecamp.com/email-submit">
+ 					<input id='email' type='email' name='email' placeholder='email'>
+					<input id='submit' type='submit'>
+				</form>
+			</center>	
+		</section> 
+		
+		<section id='about-us'>
+			<div class='flex-container'>
+				<div><a href="about-site-link"> the site </a></div>
+				<div><a href="about-newsletter-link"> the newsletter </a></div>
+				<div><a href="about-us-link"> us </a></div>
+			</div>
+		</section> 
+	</body>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<script>
+		window.onscroll = function() {myFunction()};
+
+		var header = document.getElementById("header");
+		var sticky = header.offsetTop;
+
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} 	
+			else {
+				header.classList.remove("sticky");
+			}
+		}
+  </script>
+</html>
